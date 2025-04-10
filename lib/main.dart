@@ -37,7 +37,7 @@ class _HeartRateScreenState extends State<HeartRateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Heart Rate Stream")),
+      appBar: AppBar(title: const Text("Patient's data")),
       body: StreamBuilder<Vitals>(
         stream: _patientDataStream,
         builder: (context, snapshot) {
@@ -49,10 +49,7 @@ class _HeartRateScreenState extends State<HeartRateScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Today",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
+                 
                   const SizedBox(height: 16),
                   Expanded(
                     child: GridView.count(
